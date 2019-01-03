@@ -15,6 +15,16 @@ foreach ($col1 as $cell){
 
 $col2 = fgetcsv($file, 0, ",");
 
+foreach ($col2 as $cell){
+    if(is_numeric($col2)){
+        echo "\n Numeric";
+    }
+
+    else{
+        echo "\n not numeric";
+    }
+}
+
 // echo $row[0];
 
 // function checker($file){
