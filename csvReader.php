@@ -3,14 +3,15 @@
 $file =fopen("listFile.csv", "r");
 
 //This gets the entire row
-$col1 = fgetcsv($file, 0, ",");
+$col1 = fgetcsv($file);
 print_r($col1);
 
 //So how to get the column only? 
+//Read position 0 
 
 foreach ($col1 as $cell){
     if(is_bool($cell)){
-    echo "\n boolean";
+        echo "\n boolean";
     }
 
     else{
