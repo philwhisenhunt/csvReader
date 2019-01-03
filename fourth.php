@@ -4,9 +4,8 @@ $file = fopen('listFile.csv', 'r');
 while (($line = fgetcsv($file)) !== FALSE) {
     
    
-    //convert line[0] to uppercase then lowercase
-   $upperNow =  strtoupper($line[0]);
-   $lowerNow = strtolower($upperNow);
+    //convert line[0] to lowercase
+   $lowerNow = strtolower($line[0]);
   
     //check for boolean (csv files store booleans as strings)
     if($lowerNow=="true" || $lowerNow=="false"){
