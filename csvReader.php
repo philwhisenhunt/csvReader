@@ -1,7 +1,12 @@
 <?php
 
 $file =fopen("listFile.csv", "r");
+
+//This gets the entire row
 $col1 = fgetcsv($file, 0, ",");
+print_r($col1);
+
+//So how to get the column only? 
 
 foreach ($col1 as $cell){
     if(is_bool($cell)){
@@ -13,7 +18,7 @@ foreach ($col1 as $cell){
     }
 }
 
-$col2 = fgetcsv($file, 0, ",");
+$col2 = fgetcsv($file, 1, ",");
 
 foreach ($col2 as $cell){
     if(is_numeric($col2)){
