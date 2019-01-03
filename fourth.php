@@ -3,8 +3,13 @@
 $file = fopen('listFile.csv', 'r');
 while (($line = fgetcsv($file)) !== FALSE) {
     
+   
+    //convert line[0] to uppercase then lowercase
+   $upperNow =  strtoupper($line[0]);
+   $lowerNow = strtolower($upperNow);
+  
     //check for boolean (csv files store booleans as strings)
-    if($line[0]=="True" || $line[0]=="False"){
+    if($lowerNow=="true" || $lowerNow=="false"){
         echo "\n It is a boolean";
     }
 
