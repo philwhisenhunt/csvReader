@@ -19,7 +19,8 @@ foreach ($col1 as $cell){
     }
 }
 
-$col2 = fgetcsv($file, 1, ",");
+$col2 = fgetcsv($file, 1);
+print_r($col2);
 
 foreach ($col2 as $cell){
     if(is_numeric($col2)){
