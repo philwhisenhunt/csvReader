@@ -2,11 +2,9 @@
 
 $file = fopen('listFile.csv', 'r');
 while (($line = fgetcsv($file)) !== FALSE) {
-    // echo $line[0];
-    // if(is_bool($line[0])){
-    if($line[0]){
-
-        // if($line[0]=="true"){
+    
+    //check for boolean (csv files store booleans as strings)
+    if($line[0]=="True" || $line[0]=="False"){
         echo "\n It is a boolean";
     }
 
@@ -14,6 +12,7 @@ while (($line = fgetcsv($file)) !== FALSE) {
         echo "\n NOT a boolean";
     }
 
+    //check if numeric
     if(is_numeric($line[1])){
         echo "\n It IS Numeric";
     }
@@ -22,23 +21,7 @@ while (($line = fgetcsv($file)) !== FALSE) {
         echo "\n It is NOT Numeric";
 
     }
+    echo "\n";
 
-
-//    print_r($line);
-
-//    echo $line[0];
-
-
-//    for($i=1; $i<count($line); $i++){
-
-//     echo "working" . $i;
-// //     if(is_bool($line[$i])){
-// //         echo "\n boolean";
-// //     }
-
-// //     else{
-// //         echo "\n not boolean";
-// //     }
-//    }
 }
 fclose($file);
