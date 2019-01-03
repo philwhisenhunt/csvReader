@@ -2,9 +2,12 @@
 
 $file = fopen('listFile.csv', 'r');
 while (($line = fgetcsv($file)) !== FALSE) {
+    // echo $line[0];
+    // if(is_bool($line[0])){
+    if($line[0]){
 
-        if(is_bool($line[0])){
-        echo "\n boolean";
+        // if($line[0]=="true"){
+        echo "\n It is a boolean";
     }
 
     else{
