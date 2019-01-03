@@ -1,17 +1,20 @@
 <?php
 
 $file =fopen("listFile.csv", "r");
-$row = fgetcsv($file, 0, ",");
+$col1 = fgetcsv($file, 0, ",");
 
-foreach ($row as $cell){
+foreach ($col1 as $cell){
     if(is_bool($cell)){
     echo "\n boolean";
-}
-else{
-    echo "\n not boolean";
+    }
+
+    else{
+        echo "\n not boolean";
+    }
 }
 
-}
+$col2 = fgetcsv($file, 0, ",");
+
 // echo $row[0];
 
 // function checker($file){
