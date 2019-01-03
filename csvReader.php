@@ -4,15 +4,15 @@ $file =fopen("listFile.csv", "r");
 $row = fgetcsv($file, 0, ",");
 
 foreach ($row as $cell){
-    if(is_bool($$cell)){
-    echo "boolean";
+    if(is_bool($cell)){
+    echo "\n boolean";
 }
 else{
-    echo "not boolean";
+    echo "\n not boolean";
 }
 
 }
-echo $row[0];
+// echo $row[0];
 
 // function checker($file){
 
