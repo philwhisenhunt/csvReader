@@ -8,7 +8,14 @@ while(($line = fgetcsv($file)) !== FALSE){
     $lowerNow = strtolower($line[0]);
     
     if($lowerNow === "true" || $lowerNow === "false"){
-        echo "$lowerNow is a boolean";
+        echo "\n $lowerNow is a boolean";
+    }
+    else{
+        echo "\n $lowerNow is not a boolean";
+    }
+
+    if(is_numeric($line[1])){
+        echo "\n " . $line[1] . " is not numeric."
     }
 }
 
