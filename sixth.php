@@ -16,6 +16,10 @@ $lowered = strtolower($line[0]);
         echo "\n " . $line[1] . " is numeric.";
     }
 
+    else{
+        echo "\n " . $line[1] . " is numeric.";
+    }
+
 
 
 }
